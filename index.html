@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script src="https://cdn.jsdelivr.net/npm/vue"></script>
+	<script src="jsplumb.min.js"></script>
+	<script src="index.js"></script>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<div id="app">
+		<div id="code">
+			<textarea name="code-generated" id="code-generated" cols="70" rows="50" v-model="codeNode" v-on:input="codeNode = $event.target.value"></textarea>
+			<button id="generate-graph" @click="generateGraph">Получить граф</button>
+			<button id="generate-node" @click="generateNode">Сгенерировать элемент</button>
+		</div>
+		<div id="tree"></div>
+	</div>
+</body>
+</html>
